@@ -38,7 +38,7 @@ This is currently developed in WPF with Visual Studio 2022, utilizing
 - Play with the numbers to see different results
 
 Inline-style:
-![alt text](.\ScreenResults.png "Logo Title Text 1")
+![alt text](https://github.com/rwgreene999/PrisonersRiddle/ScreenResults.png "screen view")
 
 ## Future plans
 
