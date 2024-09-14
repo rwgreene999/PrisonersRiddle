@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrisonersRiddle"
         mc:Ignorable="d"
-        Title="Prisoner's Riddle" Height="321" Width="535">
+                Title="Prisoner's Riddle" SizeToContent="WidthAndHeight">
     <Grid Margin="0,0,0,0">
         <Grid.Background>
             <LinearGradientBrush StartPoint="0 0" EndPoint="0 1">
@@ -17,12 +17,13 @@
         </Grid.Background>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="178*"/>
-            <ColumnDefinition Width="218*"/>
-            <ColumnDefinition Width="139*"/>
+            <ColumnDefinition Width="99*"/>
+            <ColumnDefinition Width="148*"/>
+            <ColumnDefinition Width="212*"/>
+            <ColumnDefinition Width="82*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="130"/>
+            <RowDefinition Height="200"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
@@ -32,7 +33,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <StackPanel Grid.ColumnSpan="3" Orientation="Horizontal"
+        <StackPanel Grid.ColumnSpan="4" Orientation="Horizontal"
             HorizontalAlignment="Left" VerticalAlignment="Center" >
             <Viewbox Margin="20,0,20,0" Width="501" >
                 <StackPanel Orientation="Vertical" >
@@ -40,11 +41,12 @@
                    FontSize="32" 
                    TextWrapping="Wrap" 
                    Foreground="Black"
-                   Text="This is a game. A team of 100 players, numbered 1 to 100 must all find their number in 100 
-randomly numbered boxes.  Each player gets 50 attempts.  Normally, each player 
+                   Text="This is a game simulation of the Prisoner's Riddle. 
+&#x0a;&#x0a;A team of 100 players, numbered 1 to 100 must all find their number in 100 
+randomly numbered boxes.  Each player gets 50 attempts.  Guessing 50 time, each player 
 has a 50% chance of finding their number, resulting in the chance that all 100 players finding 
 their number at 0.0(31 more 0s)7888% or 7.888E-31. 
-But this is loop theory, so the chances of all the team finding their box is about 30%" Width="1089" Height="299" >
+&#x0a;&#x0a;But this example uses loop theory! So the chances of all the team finding their box is about 30%" Width="1089" Height="450" >
                         <TextBlock.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -58,53 +60,53 @@ But this is loop theory, so the chances of all the team finding their box is abo
             </Viewbox>
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,10,0" Grid.Column="0"
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0,0,10,0" Grid.Column="1"
             HorizontalAlignment="Right" VerticalAlignment="Top" >
             <TextBlock Foreground="Black" Text="Number of players:"/>
         </StackPanel>
-        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10,0,0,0" Grid.Column="1"
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10,0,0,0" Grid.Column="2"
             HorizontalAlignment="Left" VerticalAlignment="Top" >
             <TextBox x:Name="tbNumOfPlayers" PreviewTextInput="genericNumbersOnly"  TextWrapping="Wrap" Text="100" Width="120"/>
         </StackPanel>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0,0,10,0" Grid.Column="0"
-            HorizontalAlignment="Right" VerticalAlignment="Top" >
+            HorizontalAlignment="Right" VerticalAlignment="Top" Grid.ColumnSpan="2" >
             <TextBlock Foreground="Black" Text="Number of attempts allowed:"/>
         </StackPanel>
-        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10,0,0,0" Grid.Column="1"
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10,0,0,0" Grid.Column="2"
             HorizontalAlignment="Left" VerticalAlignment="Top" >
             <TextBox x:Name="tbNumOfAttempts" PreviewTextInput="genericNumbersOnly"  TextWrapping="Wrap" Text="50" Width="120"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,0,10,0" Grid.Column="0"
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="0,0,10,0" Grid.Column="1"
             HorizontalAlignment="Right" VerticalAlignment="Top" >
             <TextBlock Foreground="Black" Text="Iterations of run:"/>
         </StackPanel>
-        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="10,0,0,0" Grid.Column="1"
+        <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="10,0,0,0" Grid.Column="2"
             HorizontalAlignment="Left" VerticalAlignment="Top" >
             <TextBox x:Name="tbRunIterations" PreviewTextInput="genericNumbersOnly"  TextWrapping="Wrap" Text="10000" Width="120"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="10,0,0,0" Grid.Column="1"
+        <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="10,0,0,0" Grid.Column="2"
             HorizontalAlignment="Left" VerticalAlignment="Top" >
-            <Button x:Name="btnPlayGame" Click="btnPlayGame_Click" IsDefault="True" >
+            <Button x:Name="btnPlayGame" Click="btnPlayGame_Click" IsDefault="True" Background="#FF7FD3FF" >
                 <Button.BindingGroup>
                     <BindingGroup/>
                 </Button.BindingGroup> Play the Game
             </Button>
         </StackPanel>
 
-        <StackPanel Grid.Row="5" Orientation="Horizontal" Margin="0,0,10,0" Grid.Column="0"
+        <StackPanel Grid.Row="5" Orientation="Horizontal" Margin="0,0,10,0" Grid.Column="1"
             HorizontalAlignment="Right" VerticalAlignment="Top" >
             <TextBlock x:Name="tbResultsText" Foreground="Black" Text="Success Rate:" />
         </StackPanel>
-        <StackPanel Grid.Row="5" Orientation="Horizontal" Margin="10,0,0,0" Grid.Column="1"
+        <StackPanel Grid.Row="5" Orientation="Horizontal" Margin="10,0,0,0" Grid.Column="2"
             HorizontalAlignment="Left" VerticalAlignment="Top" >
             <TextBox x:Name="tbResults" TextWrapping="Wrap" Text="0%" Width="120" />
         </StackPanel>
 
 
-        <StackPanel Grid.Row="6" Orientation="Horizontal" Margin="0,0,10,0" Grid.Column="0"
+        <StackPanel Grid.Row="6" Orientation="Horizontal" Margin="0,0,10,0" Grid.Column="1"
             HorizontalAlignment="Right" VerticalAlignment="Top" >
             <TextBlock x:Name="tbignoreMe" Foreground="Black" Text="." />
         </StackPanel>
