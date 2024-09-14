@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PrisonersRiddle"
         mc:Ignorable="d"
-        Title="Prisoner's Riddle" Height="321" Width="535">
+        Title="Prisoner's Riddle" Width="535">
     <Grid Margin="0,0,0,0">
         <Grid.Background>
             <LinearGradientBrush StartPoint="0 0" EndPoint="0 1">
@@ -22,7 +22,7 @@
             <ColumnDefinition Width="139*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="130"/>
+            <RowDefinition Height="200"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
             <RowDefinition Height="30"/>
@@ -40,11 +40,12 @@
                    FontSize="32" 
                    TextWrapping="Wrap" 
                    Foreground="Black"
-                   Text="This is a game. A team of 100 players, numbered 1 to 100 must all find their number in 100 
-randomly numbered boxes.  Each player gets 50 attempts.  Normally, each player 
+                   Text="This is a game. 
+&#x0a;&#x0a;A team of 100 players, numbered 1 to 100 must all find their number in 100 
+randomly numbered boxes.  Each player gets 50 attempts.  Guessing 50 time, each player 
 has a 50% chance of finding their number, resulting in the chance that all 100 players finding 
 their number at 0.0(31 more 0s)7888% or 7.888E-31. 
-But this is loop theory, so the chances of all the team finding their box is about 30%" Width="1089" Height="299" >
+&#x0a;&#x0a;But this example uses loop theory! So the chances of all the team finding their box is about 30%" Width="1089" Height="450" >
                         <TextBlock.RenderTransform>
                             <TransformGroup>
                                 <ScaleTransform/>
@@ -87,7 +88,7 @@ But this is loop theory, so the chances of all the team finding their box is abo
 
         <StackPanel Grid.Row="4" Orientation="Horizontal" Margin="10,0,0,0" Grid.Column="1"
             HorizontalAlignment="Left" VerticalAlignment="Top" >
-            <Button x:Name="btnPlayGame" Click="btnPlayGame_Click" IsDefault="True" >
+            <Button x:Name="btnPlayGame" Click="btnPlayGame_Click" IsDefault="True" Background="#FF7FD3FF" >
                 <Button.BindingGroup>
                     <BindingGroup/>
                 </Button.BindingGroup> Play the Game
