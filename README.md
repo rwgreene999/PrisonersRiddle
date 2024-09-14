@@ -30,12 +30,14 @@ Instead of all the prisoners dies if one gets it wrong, I decided this was a gam
 ## The code
 
 This is currently developed in WPF with Visual Studio 2022, utilizing
-.NET 7. I don't know if I used anything special from .Net 7, the last WPF program I wrote was 8 years ago.
+.NET 8.0 I don't know if I used anything special from .Net 8, the last WPF program I wrote was 8 years ago.
 
 ## Run the program
 
-- It defaults to 100 players, with 50 attempts each, and runs the game 1000 times.
+- It defaults to 100 players, each with 50 attempts each, and runs the game 10000 times.
+- when each player has 50 chances to fund their box, it generally works out that all prisoners will find their box 30% to 32% of the time
 - Play with the numbers to see different results
+- what if each prisoner only has 40 chances to find their box, simulation success drop to 13% to 14% 
 
 Inline-style:
 ![alt text](https://github.com/rwgreene999/PrisonersRiddle/blob/main/ScreenResults.png "screen view")
